@@ -572,6 +572,14 @@ void Board320_240::drawSceneHud() {
     sprintf(tmpStr3, "%01.00f", liveData->celsius2temperature(liveData->params.batTempC));
     tft.drawString(tmpStr3, 25, 180, GFXFF);
 
+//    tft.setTextColor(TFT_WHITE, TFT_BLACK);
+//    
+//    sprintf(tmpStr3, "%s", (liveData->params.ignitionOn? "ig:true" : "ig:false"));
+//    tft.drawString(tmpStr3, 125, 100, GFXFF);
+//
+//    sprintf(tmpStr3, "%s", (liveData->params.chargingOn? "ch:true" : "ch:false"));
+//    tft.drawString(tmpStr3, 125, 50, GFXFF);
+
     // Brake lights
     tft.fillRect(0, 215, 320, 25, (liveData->params.brakeLights) ? TFT_DARKRED : TFT_BLACK);
 }
